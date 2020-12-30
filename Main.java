@@ -1,3 +1,4 @@
+import java.util.LinkedList;
 import java.util.List;
 import shapes.Circle;
 import shapes.Rectangle;
@@ -11,6 +12,11 @@ public class Main {
    public static void main(String[] args) {
        int max = 10;
        ShapeAccumulator shapeAccumulator = new ShapeAccumulator();
+       LinkedList<Rectangle> rectangles = new LinkedList<>(List.of(
+               new Rectangle(Math.random() * max, Math.random() * max),
+               new Rectangle(Math.random() * max, Math.random() * max)
+       ));
+       shapeAccumulator.addAll(rectangles);
        shapeAccumulator.addAll(List.of(
                new Triangle(6.0, 7.0, 4.0),
                new Square(Math.random() * max)

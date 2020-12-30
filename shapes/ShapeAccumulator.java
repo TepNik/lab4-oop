@@ -14,7 +14,7 @@ public final class ShapeAccumulator implements Iterable<Shape> {
         shapes.add(shape);
     }
 
-    public final void addAll(Collection<Shape> collection) {
+    public final void addAll(Collection<? extends Shape> collection) {
         shapes.addAll(collection);
     }
 
